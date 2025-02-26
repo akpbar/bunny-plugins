@@ -26,12 +26,12 @@ function extractUnusableEmojis(messageString: string, size: number) {
 			if (storage.hyperlink === true) {
 				messageString = messageString.replace(
 					emojiString[0], 
-					`[:${emojiString[1]}:](https://cdn.discordapp.com/emojis/${emojiString[2]}.${ext}?size=${size})`
+					`[:󠀲${emojiString[1]}:](https://cdn.discordapp.com/emojis/${emojiString[2]}.${ext}?size=${size})`
 				);
 			} else {
 				messageString = messageString.replace(
 					emojiString[0], 
-					`https://cdn.discordapp.com/emojis/${emojiString[2]}.${ext}?size=${size}&quality=lossless&name=${emojiString[0]}`
+					`https://cdn.discordapp.com/emojis/${emojiString[2]}.${ext}?size=${size}&quality=lossless&name=${emojiString[1]}`
 				);
 			}
 		}
