@@ -33,6 +33,14 @@ export default () => {
                     note=""
                 />
                 <FormSwitchRow
+                    label="Remove : from hyperlink"
+                    subLabel="Increese hyperlink compatability"
+                    leading={<Forms.FormIcon source={getAssetIDByName("ic_link")} />}
+                    value={storage.hyperlink_compat}
+                    onValueChange={ () => {storage.hyperlink_compat = !storage.hyperlink_compat;}}
+                    note=""
+                />
+                <FormSwitchRow
                     label="Force Freemoji"
                     subLabel="Explicitly force Freemoji even if you have nitro (useful for testing)"
                     leading={<Forms.FormIcon source={getAssetIDByName("img_nitro_emojis")} />}
